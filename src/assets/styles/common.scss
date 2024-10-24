@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after  {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	-webkit-text-size-adjust: 100%;
+	font-weight: normal;
+}
+
+html {
+	font-size: var(--font-size-body);
+	font-family: 'Geometria', sans-serif;                               
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
