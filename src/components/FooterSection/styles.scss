@@ -1,0 +1,85 @@
+.footer {
+	margin-top: 80px;
+	position: relative;
+	max-width: 1100px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		margin-right: 106px;
+	}
+
+	&__links {
+		display: flex;
+		gap: 60px;
+	}
+
+	&__column {
+		h3 {
+			color: var(--color-gray-base);
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+
+		ul li {
+			margin-bottom: 10px;
+			list-style: none;
+
+			a {
+				color: var(--color-gray-base);
+				text-decoration: none;
+				font-size: 14px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	&__contacts {
+		text-align: right;
+	}
+}
+
+.line {
+	position: relative;
+	display: flex;
+
+	&::before {
+		background: url('@/assets/images/footer-line.png') 100% no-repeat;
+		content: "";
+		background-size: 100%;
+		height: 779px;
+		inset: -400px 0 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+.bank-name {
+    color: var(--color-gray-base);
+    font-size: 14px;
+	line-height: 26px;
+    margin-top: 15px;
+}
+
+.contact-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    margin-bottom: 20px;
+
+	h3 {
+		color: var(--color-gray-base);
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: var(--subtitle-color);
+		text-decoration: none;
+		font-size: 24px;
+	}
+}

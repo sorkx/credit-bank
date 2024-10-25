@@ -1,0 +1,82 @@
+.personal-assistant {
+	position: relative;
+	color: var(--color-white-base);
+	text-align: center;
+	padding-right: 362px;
+	margin-bottom: 180px;
+
+	&::before {
+		background: url('@/assets/images/assistant-bg.png') 100% no-repeat;
+		content: "";
+		background-size: 100%;
+		height: 1792px;
+		inset: -400px 0 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 37px;
+		margin-bottom: 12px;
+	}
+
+	&__subtitle {
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 60px;
+
+		strong {
+			color: var(--primary-color);
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 190px;
+	}
+
+	&__image {
+		height: auto;
+	}
+}
+
+.responsibility {
+	&__list {
+		flex: 0 0 22%;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			text-align: left;
+		}
+	}
+
+	&__icon {
+		margin-right: 18px;
+	}
+}
+
+
+@media (max-width: 768px) {
+    .personal-assistant {
+        flex-direction: column;
+    }
+    
+    .assistant-image,
+    .features-list {
+        flex: 0 0 100%;
+    }
+    
+    .assistant-image {
+        margin-bottom: 40px;
+    }
+}

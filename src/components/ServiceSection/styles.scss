@@ -1,0 +1,55 @@
+.service {
+	margin-bottom: 142px;
+	&__title {
+		font-size: 30px;
+		line-height: 37px;
+		color: var(--color-white-base);
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 43px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	&__card {
+		max-width: 281px;
+	}
+
+	&-item {
+		overflow: hidden;
+
+		&__title {
+			font-size: 18px;
+			line-height: 22px;
+			color: var(--color-white-base);
+			text-wrap: balance;
+			margin-bottom: 7px;
+		}
+
+		&__description {
+			font-size: 14px;
+			line-height: 20px;
+			color: var(--color-gray-base);	
+		}
+
+		&__providers {
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			gap: 28px;
+			margin-top: 27px;
+		}
+	}
+
+	&__image {
+		width: 280px;
+		height: 156px;
+		object-fit: cover;
+		margin-bottom: 34px;
+	}
+}

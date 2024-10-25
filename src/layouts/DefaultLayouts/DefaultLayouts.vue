@@ -1,12 +1,12 @@
 <script setup>
-import FooterSection from '@/components/FooterSection/FooterScrion.vue'
+import FooterSection from '@/components/FooterSection/FooterSection.vue'
 import HeaderSection from '@/components/HeaderSection/HeaderSection.vue'
 </script>
 
 <template>
 	<HeaderSection />
 
-	<main class="container">
+	<main>
 		<slot />
 	</main>
 

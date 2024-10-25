@@ -1,7 +1,13 @@
-@font-face {
-    font-family: 'Geometria';
-    src: url('@/assets/fonts/Geometria.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+@mixin font-face($fontFamily, $fileName, $fontWeight, $fontStyle: normal) {
+	@font-face {
+	  font-family: $fontFamily;
+	  src: url('@/assets/fonts/#{$fileName}.woff2') format('woff2'),
+	  url('@/assets/fonts/#{$fileName}.woff') format('woff');
+	  font-weight: $fontWeight;
+	  font-style: $fontStyle;
+	  font-display: swap;
+	}
+  }
+  
+  @include font-face('Geometria', 'Geometria-ExtraBold', var(--font-weight-extra-bold));
+  @include font-face('Geometria', 'Geometria-Bold', var(--font-weight-bold));
