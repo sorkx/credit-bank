@@ -1,5 +1,9 @@
 <script setup>
+import { inject } from 'vue'
 import Button from '@/components/Button/Button.vue'
+
+const modal = inject('modal')
+const { show: showModal } = modal
 
 const featureItems = [
 	{
@@ -48,7 +52,10 @@ const featureItems = [
 						</span>
 					</div>
 				</div>
-				<Button>
+				<Button 
+					modificator="main" 
+					@click="showModal = true"
+				>
 					Заказать сейчас
 				</Button>
 			</div>

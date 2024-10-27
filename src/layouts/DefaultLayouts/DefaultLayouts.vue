@@ -6,7 +6,7 @@ import HeaderSection from '@/components/HeaderSection/HeaderSection.vue'
 <template>
 	<HeaderSection />
 
-	<main>
+	<main class="main">
 		<slot />
 	</main>
 

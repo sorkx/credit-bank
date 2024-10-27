@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+	modificator: {
+		type: String,
+		default: '',
+	}
+})
+</script>
 
 <template>
-	<button class="button">
+	<button :class="`button--${props.modificator}`">
 		<slot />
 	</button>
 </template>

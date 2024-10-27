@@ -73,7 +73,10 @@ const serviceItems = [
 </script>
 
 <template>
-	<section class="service container">
+	<section
+		id="service" 
+		class="service container"
+	>
 		<h2 class="service__title">
 			Мы позаботились, чтобы вы получили
 		</h2>

@@ -1,36 +1,39 @@
 <script setup>
-import ticketIcon from '@/assets/icons/ticket.svg'
-import milesIcon from '@/assets/icons/miles.svg'
-import insuranceIcon from '@/assets/icons/insurance.svg'
-import curencyIcon from '@/assets/icons/currency.svg'
+import TicketIcon from '@/components/icons/TicketIcon.vue'
+import MilesIcon from '@/components/icons/MilesIcon.vue'
+import InsuranceIcon from '@/components/icons/InsuranceIcon.vue'
+import CurrencyIcon from '@/components/icons/CurrencyIcon.vue'
 
 const benefitItems = [
 	{
 		title: 'Билеты любых авиакомпаний',
 		text: 'Предложения от 300+ авиакомпаний, 185+ lowcost-перевозчиков, партнеры от 60 крупных российских туроператоров',
-		icon: ticketIcon,
+		icon: TicketIcon,
 	},
 	{
 		title: 'Мили больше не сгорают',
 		text: 'Мили, накопленные при оплате картой AIA Travel, не сгорают и остаются на вашем счете, пока вы не решите их потратить',
-		icon: milesIcon,
+		icon: MilesIcon,
 	},
 	{
 		title: 'Продвинутая страховка – бесплатно',
 		text: 'Расширенная страховка для всей семьи с учетом экстремальных видов спорта и алкоголя',
-		icon: insuranceIcon,
+		icon: InsuranceIcon,
 	},
 	{
 		title: 'Доступ к счетам в разных валютах',
 		text: 'Текущие счета в рублях, долларах США, евро, английских фунтах стерлингов и швейцарских франках открываются в любой момент',
-		icon: curencyIcon,
+		icon: CurrencyIcon,
 	}
 ]
 </script>
 
 
 <template>
-	<section class="card-plus container">
+	<section 
+		id="benefits"
+		class="card-plus container"
+	>
 		<h2 class="card-plus__title">
 			Путешествие мечты начинается с CARD PLUS
 		</h2>
@@ -43,11 +46,8 @@ const benefitItems = [
 				:key="benefit.title" 
 				class="benefit"
 			>
-				<div class="benefit__icon">
-					<img 
-						:src="benefit.icon" 
-						alt="icon"
-					/>
+				<div class="benefit__icon">	
+					<component :is="benefit.icon" />
 				</div>
 				<h3 class="benefit__title">
 					{{ benefit.title }}

@@ -1,0 +1,18 @@
+button {
+	border: none;
+    background: none;
+    box-shadow: none;
+	transition: .5s;
+	transform: translateX(-73px);
+	z-index: 100;
+	cursor: pointer;
+
+	img {
+		width: 20px;
+		height: 20px;
+	}
+
+	svg {
+		fill: var(--primary-color);
+	}
+}

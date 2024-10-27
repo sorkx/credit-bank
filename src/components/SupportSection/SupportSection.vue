@@ -1,31 +1,34 @@
 <script setup>
-import dialog from '@/assets/icons/dialog.svg'
-import map from '@/assets/icons/map.svg'
-import diamond from '@/assets/icons/diamond.svg'
-import fork from '@/assets/icons/fork.svg'
+import MapIcon from '@/components/icons/MapIcon.vue'
+import ForkIcon from '@/components/icons/ForkIcon.vue'
+import DiamondIcon from '@/components/icons/DiamondIcon.vue'
+import DialogIcon from '@/components/icons/DialogIcon.vue'
 
 const responsibilityList = [
 	{
 		title: 'Организует встречи, найдет гидов и переводчиков',
-		icon: dialog,
+		icon: DialogIcon,
 	},
 	{
 		title: 'Спланирует поездку по самым интересным местам вашего отдыха',
-		icon: map,
+		icon: MapIcon,
 	},
 	{
 		title: 'Достанет билеты на мероприятия, даже если их уже нет в продаже',
-		icon: diamond,
+		icon: DiamondIcon,
 	},
 	{
 		title: 'Закажет столик в ресторане, клубе или кафе',
-		icon: fork,
+		icon: ForkIcon,
 	}
 ]
 </script>
 
 <template>
-	<section class="personal-assistant background-container">
+	<section
+		id="support" 
+		class="personal-assistant background-container"
+	>
 		<h2 class="personal-assistant__title">
 			Персональный помощник
 		</h2>
@@ -46,10 +49,7 @@ const responsibilityList = [
 					class="responsibility__item"
 				>
 					<div class="responsibility__icon">
-						<img 
-							:src="responsibility.icon"
-							alt="icon"
-						/>
+						<component :is="responsibility.icon" />
 					</div>
 					<p>
 						{{ responsibility.title }}

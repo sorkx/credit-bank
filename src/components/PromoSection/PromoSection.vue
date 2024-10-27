@@ -1,5 +1,9 @@
 <script setup>
+import { inject } from 'vue'
 import Button from '@/components/Button/Button.vue'
+
+const modal = inject('modal')
+const { show: showModal } = modal
 
 const benefits = [
 	{
@@ -43,7 +47,10 @@ const cardItems = [
 </script>
 
 <template>
-	<section class="promo container">
+	<section
+		id="promo" 
+		class="promo container"
+	>
 		<h2 class="promo__title">
 			Оформите свою новую карту для путешествий
 		</h2>
@@ -78,14 +85,21 @@ const cardItems = [
 			</div>
 			<div class="card-options">
 				<div class="card-types">
-					<button class="active">
+					<Button
+						modificator="tab" 
+						class="active"
+					>
 						Кредитная карта
-					</button>
-					<button>
+					</Button>
+					<Button modificator="tab">	
 						Дебетовая карта
-					</button>
+					</Button>
 				</div>
-				<Button class="apply-button">
+				<Button 
+					@click="showModal = true" 
+					class="apply-button"
+					modificator="main"
+				>
 					Отправить заявку
 				</Button>
 				<div class="card-details">

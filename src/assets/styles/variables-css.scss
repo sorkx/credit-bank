@@ -1,13 +1,20 @@
 :root {
 	--primary-color: #c0965c;
+	--hover-button-color: #9a784a;
 	--color-white-base: #fff;
 	--color-black-base: #0e0e0e;
 	--color-gray-base: #6c6c6c;
+	--color-dark-gray: #333;
+	--color-disabled: #191919;
 	--subtitle-color: #bbb;
+	--sidebar-background: #1c1c1b;
+	--modal-background: #000;
+	--error-color: #cc301b;
+	--sucess-color: #89cc1b;
 
 	--line-height-text: 20px;
 	--font-size-body: 14px;
-	--font-weight-bold: 500;
+	--font-weight-medium: 500;
 	--font-weight-bold: 700;
 	--font-weight-extra-bold: 800;
 }
