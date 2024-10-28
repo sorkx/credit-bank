@@ -73,7 +73,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .personal-assistant {
 		&__content {
 			justify-content: space-between;
@@ -88,5 +88,37 @@
     
     .assistant-image {
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+	.responsibility {
+		&__list {
+			flex: 0 0 66%;
+		}
+	}
+
+	.personal-assistant {
+		margin-bottom: 100px;
+		
+		&::before {
+			height: 1300px;
+		}
+
+		&__image {
+			display: none;
+		}
+
+		&__content {
+			justify-content: center;
+		}
+
+		&__title {
+			font-size: 20px;
+		}
+
+		&__subtitle {
+			font-size: 12px;
+		}
     }
 }

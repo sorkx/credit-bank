@@ -61,3 +61,17 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.service {
+		&__cards {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+
+		&__title {
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+	}
+}

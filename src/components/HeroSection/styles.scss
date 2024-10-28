@@ -122,7 +122,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
 	.premium-card {
 		&__header {
 			display: flex;
@@ -152,6 +152,20 @@
 
 		&__image {
 			right: unset;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.premium-card {
+		&::before {
+			height: 1064px;
+		}
+		&__image {
+			img {
+				width: 700px;
+				height: 500px;
+			}
 		}
 	}
 }
