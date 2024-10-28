@@ -77,7 +77,7 @@ const serviceItems = [
 		id="service" 
 		class="service container"
 	>
-		<h2 class="service__title">
+		<h2 class="service__title indent-title">
 			Мы позаботились, чтобы вы получили
 		</h2>
 		<div class="service__cards">

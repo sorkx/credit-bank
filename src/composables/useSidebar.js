@@ -8,7 +8,7 @@ export function useSidebar() {
 		isOpen.value = !isOpen.value
 		isShifted.value = !isShifted.value
 		
-		document.querySelectorAll('section, header, footer').forEach(section => {
+		document.querySelectorAll('main, header, footer').forEach(section => {
 			if (isShifted.value) {
 				section.classList.add('shifted')
 			} else {
@@ -22,6 +22,6 @@ export function useSidebar() {
 		isShifted,
 		toggleSidebar
 	}
-  }
+}
 
 

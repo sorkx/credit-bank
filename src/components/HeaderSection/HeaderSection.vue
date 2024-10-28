@@ -10,21 +10,24 @@ const { isOpen, toggleSidebar } = useSidebar()
 <template>
 	<header class="header container">
 		<div class="header__content">
-			<BurgerButton
-				:open="isOpen" 
-				@click="toggleSidebar()" 
-			/>
-			<div class="header__logo">
-				<img 
-					src="@/assets/images/logo.png" 
-					alt="Credit Europe Bank"
-					width="296px"
-					height="36px"
+			<div class="header__inner">
+				<BurgerButton
+					class="burger-button"
+					:open="isOpen" 
+					@click="toggleSidebar()" 
 				/>
+				<div class="header__logo">
+					<img 
+						src="@/assets/images/logo.png" 
+						alt="Credit Europe Bank"
+						width="296px"
+						height="36px"
+					/>
+				</div>
 			</div>
 		</div>
 	</header>
-	<Sidebar :is-open="isOpen" />
+	<Sidebar @update:is-open="toggleSidebar()" :is-open="isOpen" />
 </template>
 
 <style src="./styles.scss" lang="scss" scoped />

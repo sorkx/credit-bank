@@ -34,7 +34,7 @@ const benefitItems = [
 		id="benefits"
 		class="card-plus container"
 	>
-		<h2 class="card-plus__title">
+		<h2 class="card-plus__title indent-title">
 			Путешествие мечты начинается с CARD PLUS
 		</h2>
 		<p class="card-plus__subtitle">

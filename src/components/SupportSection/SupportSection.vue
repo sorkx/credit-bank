@@ -27,9 +27,9 @@ const responsibilityList = [
 <template>
 	<section
 		id="support" 
-		class="personal-assistant background-container"
+		class="personal-assistant container"
 	>
-		<h2 class="personal-assistant__title">
+		<h2 class="personal-assistant__title indent-title">
 			Персональный помощник
 		</h2>
 		<p class="personal-assistant__subtitle">

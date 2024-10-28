@@ -26,7 +26,7 @@ const featureItems = [
 </script>
 
 <template>
-	<section class="premium-card background-container">
+	<section class="premium-card container">
 		<div class="premium-card__content">
 			<div class="premium-card__text">
 				<div class="premium-card__header">

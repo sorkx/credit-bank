@@ -1,5 +1,5 @@
 <script setup>
-import { inject } from 'vue'
+import { inject, nextTick } from 'vue'
 
 const modal = inject('modal')
 const { show: showModal } = modal
@@ -11,10 +11,10 @@ const props = defineProps({
 	}
 })
 
-const handleClick = (event, navigate) => {
-	showModal.value = true
+const emit = defineEmits(['update:isOpen'])
 
-	navigate(event)
+const closeSidebar = () => {
+  emit('update:isOpen', false)
 }
 
 const sidebarContacts = [
@@ -48,6 +48,27 @@ const links = [
 
 	}
 ]
+
+const handleOpenModal = (event, navigate) => {
+	showModal.value = true
+
+	navigate(event)
+}
+
+const handleClickHash = async (hash) => {
+	const sectionId = hash.replace('#', '')
+	const element = document.getElementById(sectionId)
+
+	if (element) {
+		element.scrollIntoView({ 
+			behavior: 'smooth',
+		})
+	}
+
+	await new Promise(resolve => setTimeout(resolve, 100))
+
+	closeSidebar()
+}
 </script>
 
 <template>
@@ -59,20 +80,24 @@ const links = [
 	>
 		<div class="sidebar__content">
 			<template v-for="link in links" :key="link.hash">
-				<router-link 
+				<router-link
+					class="sidebar__link" 
 					:to="link.hash"
 					v-slot="{ navigate, href }"
+					@click="handleClickHash(link.hash)" 
 				>
+					<template
+						v-if="!link.isModal"
+					>
+						{{ link.text }}
+					</template>
 					<a
-						v-if="link.isModal" 
+						v-else
 						:href="href" 
-						@click="handleClick($event, navigate)"
+						@click="handleOpenModal($event, navigate)"
 					>
 						{{ link.text }}
 					</a>
-					<template v-else>
-						{{ link.text }}
-					</template>
 				</router-link>
      		 </template>
 		</div>

@@ -2,14 +2,13 @@
 	position: relative;
 	color: var(--color-white-base);
 	text-align: center;
-	padding-right: 362px;
 	margin-bottom: 180px;
 
 	&::before {
 		background: url('@/assets/images/assistant-bg.png') 100% no-repeat;
 		content: "";
 		background-size: 100%;
-		height: 1792px;
+		height: 1904px;
 		inset: -400px 0 0;
 		position: absolute;
 		z-index: -1;

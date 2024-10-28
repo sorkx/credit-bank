@@ -7,4 +7,14 @@
 		display: flex;
 		padding: 86px 0 0;
 	}
+
+	&__inner {
+		position: relative;
+	}
+}
+
+.burger-button {
+	position: absolute;
+	bottom: 10px;
+	left: -73px;
 }
