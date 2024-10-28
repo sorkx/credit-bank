@@ -135,3 +135,15 @@
 		}
 	}
 }
+
+@media (max-width: 425px) {
+	.bank-name {
+		    display: none;
+	}
+
+	.footer {
+		&__links {
+			gap: 30px;
+		}
+	}
+}

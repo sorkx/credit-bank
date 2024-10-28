@@ -163,3 +163,21 @@
 	opacity: 0;
 	transform: translateY(-10px);
 }
+
+@media (max-width:450px) {
+	.dropdown {
+		&-header {
+			padding: 30px 23px 10px 30px;
+		}
+
+		&-label {
+			top: 27px;
+			font-size: 14px;
+			line-height: 10px;
+		}
+
+		&-selection-text {
+			font-size: 18px;
+		}
+	}
+}

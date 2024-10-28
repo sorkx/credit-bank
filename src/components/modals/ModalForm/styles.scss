@@ -181,3 +181,41 @@
 		font-size: 14px;
 	}
 }
+
+@media (max-width: 450px) {
+	.modal {
+		&-form {
+			max-width: 350px;
+		}
+
+		&-header {
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}
+
+	.form {
+		&-field {
+			padding: 30px 23px 10px 30px;
+			font-size: 18px;
+		}
+
+		&-label {
+			font-size: 14px;
+			line-height: 10px;
+			top: 22px;
+		}
+	}
+
+	.checkbox-label {
+		font-size: 10px;
+	}
+
+	.custom-checkbox + label {
+		&::before {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
