@@ -50,3 +50,11 @@ footer.shifted {
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
 }
+
+@media (max-width: 1440px) {
+	main.shifted,
+	header.shifted,
+	footer.shifted {
+		left: unset;
+	}
+}

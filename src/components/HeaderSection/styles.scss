@@ -17,4 +17,24 @@
 	position: absolute;
 	bottom: 10px;
 	left: -73px;
+	width: 23px;
+}
+
+@media (max-width: 1440px) {
+	.burger-button {
+		position: unset;
+	}
+
+	.header {
+		&__inner {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 20px;
+		}
+
+		&__content {
+			justify-content: flex-end;
+		}
+	}
 }
