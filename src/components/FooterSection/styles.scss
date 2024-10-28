@@ -83,3 +83,28 @@
 		font-size: 24px;
 	}
 }
+
+@media (max-width: 1440px) {
+	.footer {
+		padding-right: unset;
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+		&__row {
+			flex-direction: column;
+		}
+
+		&__links {
+			margin: 20px 0;
+			gap: 50px;
+		}
+
+		&__logo {
+			display: flex;
+			gap: 20px;
+			align-items: flex-end;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 <script setup>
-import { inject, nextTick } from 'vue'
+import { inject, onMounted, onUnmounted } from 'vue'
 
 const modal = inject('modal')
 const { show: showModal } = modal

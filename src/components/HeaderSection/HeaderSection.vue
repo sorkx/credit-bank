@@ -4,7 +4,6 @@ import BurgerButton from '@/components/BurgerButton/BurgerButton.vue'
 import { useSidebar } from '@/composables/useSidebar.js'
 
 const { isOpen, toggleSidebar } = useSidebar()
-
 </script>
 
 <template>

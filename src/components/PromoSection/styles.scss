@@ -64,8 +64,6 @@
 		img {
 			width: 588px;
     		height: 376px;
-			// width: 100%;
-			// height: auto;
 		}
 	}
 
@@ -112,4 +110,43 @@
     margin-top: 27px;
 	font-size: 14px;
 	line-height: 26px;
+}
+
+@media (max-width: 1440px) {
+	.promo {
+		padding-right: unset;
+	}
+}
+
+@media (max-width: 1024px) {
+	.card {
+		&-showcase {
+			gap: 50px;
+		}
+
+		&-image {
+			img {
+				width: 400px;
+				height: 250px;
+			}
+		}
+
+		&-types {
+			margin-bottom: 20px;
+		}
+
+		&-item {
+			&__value, &__title {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.apply-button {
+		margin-bottom: 20px;
+	}
+
+	.more-details {
+		margin-top: 10px;
+	}
 }

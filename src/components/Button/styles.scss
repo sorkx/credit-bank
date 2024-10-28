@@ -46,3 +46,17 @@
 		}
 	}
 }
+
+@media (max-width: 1024px) {
+	.button {
+		&--main {
+			font-size: 18px;
+			padding: 20px 30px;
+		}
+
+		&--tab {
+			padding: unset;
+			font-size: 16px;
+		}
+	}
+}
