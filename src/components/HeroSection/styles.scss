@@ -124,12 +124,34 @@
 
 @media (max-width: 768px) {
 	.premium-card {
+		&__header {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			width: 100%;
+			margin-bottom: 30px;
+
+			&--title {
+				font-size: 60px;
+				margin-bottom: unset;
+			}
+
+			&--subtitle {
+				width: 100%;
+				position: unset;
+			}
+		}
+
 		&__content {
 			grid-template-columns: 1fr;
 		}
 
 		&__features {
-			grid-template-columns: 1fr;
+			grid-template-columns: 200px 200px;
+		}
+
+		&__image {
+			right: unset;
 		}
 	}
 }

@@ -66,6 +66,22 @@
     }
 }
 
+@media (max-width: 768px) {
+	.benefits {
+		display: flex;
+    	align-items: center;
+	}
+
+	.card {
+		&-showcase {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
 @media (max-width: 576px) {
     .card-plus__benefits {
         grid-template-columns: 1fr;

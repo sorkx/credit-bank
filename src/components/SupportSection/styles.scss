@@ -75,7 +75,10 @@
 
 @media (max-width: 768px) {
     .personal-assistant {
-        flex-direction: column;
+		&__content {
+			justify-content: space-between;
+			gap: unset;
+		}
     }
     
     .assistant-image,
